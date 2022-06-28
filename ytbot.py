@@ -57,9 +57,9 @@ print("[*] Opening clip in video player..")
 os.startfile(filename)
 
 op = input("[+] Do you want to trim the video? (Y/n): ")
-if (op in ["Y", "y", ""]):
+if op in ["Y", "y", ""]:
     # Open video trimming util
-    if (videotrim_util.trimVideo(filename)):
+    if videotrim_util.trimVideo(filename):
         print("[*] Video trimmed successfully!")
         filename = filename.split(".ts")[0] + "_trimmed.ts"
     else:
